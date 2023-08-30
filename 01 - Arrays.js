@@ -1,3 +1,12 @@
+//Diferencias entre arrow y regular 
+
+// Las arrow functions son más concisas y se definen utilizando una sintaxis más corta, 
+// lo que las hace ideales para funciones simples y anónimas. Además, heredan automáticamente el valor de 
+// "this" del contexto en el que están definidas, lo que puede ser beneficioso en ciertos casos. Por otro lado, 
+// las funciones regulares tienen una sintaxis más completa y permiten más flexibilidad, como la posibilidad de 
+// definir métodos de función y utilizar el operador "arguments". También tienen su propio ámbito para "this", 
+// que puede variar según cómo se llame la función. 
+
 // Repaso de arrays con razas de perros
 const dogBreeds = ["Labrador", "Poodle", "Bulldog"];
 const dogBreeds2 = ["German Shepherd", "Golden Retriever", "Beagle"];
