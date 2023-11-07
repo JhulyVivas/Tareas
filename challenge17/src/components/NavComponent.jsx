@@ -7,7 +7,7 @@ export const NavComponent = () => {
         <nav className={styles.nav}>
             <ul>
                 <li>
-                    <NavLink exact to="/" activeClassName={styles.active}>
+                    <NavLink exact to="/home" activeClassName={styles.active}>
                         Home
                     </NavLink>
                 </li>
@@ -17,7 +17,7 @@ export const NavComponent = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/login" activeClassName={styles.active}>
+                    <NavLink to="/" activeClassName={styles.active}>
                         Login
                     </NavLink>
                 </li>
