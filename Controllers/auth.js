@@ -27,7 +27,7 @@ const loginUsuario = (req, res = express.request) => {
 
 const revalidarToken = (req, res = express.request) => {
     res.json({
-        ok: true
+        ok: "Revalidar"
     })
 }
 

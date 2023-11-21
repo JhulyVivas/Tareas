@@ -11,7 +11,7 @@ router.post(
     [
         check('name', 'El nombre es obligatorio').not().isEmpty(),
         check('email', 'El email es obligatorio').isEmail(),
-        check('password', ).isLength({ min: 6}),
+        check('password', 'Debe tener min 6 caracteres').isLength({ min: 6}),
         validarCampos
     ],
     crearUsuario )
