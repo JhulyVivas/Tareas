@@ -4,7 +4,7 @@ const Usuario = require('../models/UsuariosSchema');
 const { generarJWT } = require('../helpers/jwt');
 
 
-const crearUsuario = async(req, res = express.response) => {
+const crearUsuario = async(req, res = express.request) => {
     const { name, email, password } = req.body
     
     try{
@@ -34,7 +34,7 @@ const crearUsuario = async(req, res = express.response) => {
     }
 }
 
-const loginUsuario = async(req, res = express.response) => {
+const loginUsuario = async(req, res = express.request) => {
     const { email, password } = req.body
 
     try{

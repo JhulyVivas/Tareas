@@ -29,4 +29,4 @@ UsuariosSchema.virtual('tareas', {
     justOne: false,
 })
 
-module.exports = model('Usuario', UsuariosSchemasuarioSchema);
+module.exports = model('Usuario', UsuariosSchema);
