@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const { check } = require('express-validator'); 
-const { crearUsuario, loginUsuario, revalidarToken } = require('../Controllers/auth');
-const { listatUsuarios } = require('../Controllers/Users')
-const { validarCampos } = require('../middlewares/validar-campos');
-const { validarJWT } = require('../middlewares/validar-token');
+const { crearUsuario, loginUsuario, revalidarToken } = require('../Controllers/auth.js');
+const { listarUsuarios } = require('../Controllers/users.js');
+const { validarCampos } = require('../middlewares/validar-campos.js');
+const { validarJWT } = require('../middlewares/validar-token.js')
 
 router.post('/', loginUsuario)
 
@@ -13,12 +13,14 @@ router.post(
     [
         check('name', 'El nombre es obligatorio').not().isEmpty(),
         check('email', 'El email es obligatorio').isEmail(),
-        check('password', 'Debe tener min 6 caracteres').isLength({ min: 6}),
+        check('password', "la clave debe tener al menos 6 digitos").isLength({ min: 6}),
         validarCampos
     ],
-    crearUsuario )
-router.post('/renew', validarJWT, revalidarToken)
+    crearUsuario 
+)
 
-router.get('/', listatUsuarios)
+router.get('/renew', validarJWT, revalidarToken)
+
+router.get('/', listarUsuarios)
 
 module.exports = router;

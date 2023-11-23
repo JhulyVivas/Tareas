@@ -1,5 +1,5 @@
 const express = require('express');
-const Task = require('../models/TaskShema');
+const Task = require('../models/TaskSchema');
 
 const crearTask = async (req, res = express.request ) => {
     const task = new Task(req.body);
